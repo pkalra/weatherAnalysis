@@ -50,7 +50,7 @@ for item in metro_list:
 				thunder.append(item['thunder'])
 				tornado.append(item['tornado'])
 				icon.append(item['icon'])
-				break
+				break # some days have weather reported every 20 mins for same hour. Added break to take only first instance of hour 19
 		d += delta
 
 output_file = xw.Workbook("output.xlsx")
